@@ -19,6 +19,7 @@ export const CardClima = () => {
             const response = await fetch(`${URL}?q=${ciudad}&appid=${API_KEY}`)
             const data = await response.json()
             setDataClima(data)
+            console.log(data)
         } catch (error) {
             console.error(error)
         }
@@ -36,7 +37,6 @@ export const CardClima = () => {
     }
 
     return (
-  <>
   <div>
     <form onSubmit={handleSubmit}>
         <input 
@@ -50,11 +50,11 @@ export const CardClima = () => {
     {dataClima && (
         <div>
             <h3>{dataClima.name}</h3>
-            <h6>Temeratura: {parseInt(dataClima.main.temp - difKelvin)}°C</h6>
-            <img src={`https://openweathermap.org/img/wn/${dataClima.weather[0].icon}@2x.png`} alt={dataClima.name} />
+             <h6>Temeratura:  {parseInt(dataClima.main.temp - difKelvin)}°C</h6>
+             <img src={`https://openweathermap.org/img/wn/${dataClima.weather[0].icon}@2x.png`} />  
         </div>
     )}
   </div>
-  </>
+  
   )
 }
