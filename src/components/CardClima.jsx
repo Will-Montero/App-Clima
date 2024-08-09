@@ -19,7 +19,7 @@ export const CardClima = () => {
           placeholder="Ingresa Ciudad"
           className="input-app"
         />
-        <img className="lupa-busqueda" src={lupaBusqueda} alt="Buscar" />
+        <img className="lupa-busqueda" onClick={handleSubmit} src={lupaBusqueda} alt="Buscar" />
       </form>
 
       {dataClima && dataClima.main && dataClima.weather && (
