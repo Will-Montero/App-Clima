@@ -149,13 +149,13 @@
         box-shadow: 0px 4px 6px rgba(196, 18, 18, 0.1);
         text-align: center;
         width: 88%;
-        height: 30vh;
+        height: 25vh;
         margin: 20px auto;
     }
 
     .clima-info img {
-        width: 40%;
-        height: 20vh;
+        width: 30%;
+        height: 15vh;
         background-color: rgb(0, 123, 238);
     }
 
