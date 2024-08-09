@@ -142,9 +142,9 @@
         box-shadow: 0px 4px 6px rgba(196, 18, 18, 0.1);
         text-align: center;
         width: 88%;
-        height: 40vh;
+        height: 35vh;
         margin: 20px auto;
-        filter: drop-shadow(2px 2px 5px rgba(17, 133, 241, 0.911));
+        filter: drop-shadow(2px 2px -2px 5px rgba(17, 133, 241, 0.911));
     }
 
     .clima-info img {
@@ -152,6 +152,7 @@
         height: 24vh;
         font-size: 30px;
         background-color: rgb(0, 123, 238);
+        z-index: 1;
     }
 
     .clima-info h3 {
