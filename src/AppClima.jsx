@@ -1,6 +1,6 @@
-
+import { CardClima } from "./components/CardClima"
 export const AppClima = () => {
   return (
-    <div>AppClima</div>
+    <CardClima></CardClima>
   )
 }
