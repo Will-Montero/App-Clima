@@ -62,7 +62,7 @@
     color: #0e0e0e;
 }
 
-.clima-info h6 {
+.clima-info  h6 {
     margin: 10px 0;
     font-size: 18px;
     color: #222222;
@@ -70,7 +70,7 @@
 
 .clima-info img {
     font-size: 30px;
-    background-color: rgba(16, 190, 0, 0.812);
+    background-color: rgba(14, 137, 3, 0.812);
     border-radius: 50%;
 }
 

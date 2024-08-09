@@ -24,7 +24,7 @@ export const CardClima = () => {
 
       {dataClima && dataClima.main && dataClima.weather && (
         <div className="clima-info">
-          <h3>{dataClima.name}</h3>
+          <h3>{dataClima.name}, {dataClima.sys.country}</h3>
           <h6>Temperatura: {parseInt(dataClima.main.temp - difKelvin)}°C</h6>
           <img
             src={`https://openweathermap.org/img/wn/${dataClima.weather[0].icon}@2x.png`}
