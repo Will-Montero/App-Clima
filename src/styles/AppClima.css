@@ -121,6 +121,15 @@
 
 /* Media queries para pantallas muy pequeñas (teléfonos) */
 @media (max-width: 480px) {
+    .container-app {
+        padding-top: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: sans-serif;
+    }
     .form-app {
         width: 90%;
     }
@@ -142,7 +151,7 @@
         box-shadow: 0px 4px 6px rgba(196, 18, 18, 0.1);
         text-align: center;
         width: 88%;
-        height: 35vh;
+        height: 40vh;
         margin: 20px auto;
         filter: drop-shadow(2px 2px -2px 5px rgba(17, 133, 241, 0.911));
     }
