@@ -1,5 +1,6 @@
 import { useState } from "react"
-
+import '../styles/AppClima.css'
+import lupaBusqueda from '../assets/lupaBusqueda.png'
 export const CardClima = () => {
 
     //inicializamos los cambios de estado
@@ -16,16 +17,21 @@ export const CardClima = () => {
     //hacemos el fetch de la Api y seteamos la data
     const fetchClima = async () => {
         try {
-            const response = await fetch(`${URL}?q=${ciudad}&appid=${API_KEY}`)
-            const data = await response.json()
-            setDataClima(data)
-            console.log(data)
+            const response = await fetch(`${URL}?q=${ciudad}&appid=${API_KEY}`);
+            if (!response.ok) {
+                throw new Error(`Error: ${response.status} ${response.statusText}`);
+            }
+            const data = await response.json();
+            setDataClima(data);
+            console.log(data);
         } catch (error) {
-            console.error(error)
+            console.error(error);
+            setDataClima(null); // O maneja el error de alguna manera
         }
     }
+    
 
-    //imos los valores de la ciudad ingresada (onChange)
+    //oimos los valores de la ciudad ingresada (onChange)
     const handleCambioClima = (e) => {
         setCiudad(e.target.value)
     }
@@ -37,24 +43,27 @@ export const CardClima = () => {
     }
 
     return (
-  <div>
-    <form onSubmit={handleSubmit}>
+        <div className="container-app">
+    <h2>Clima Mundial</h2>
+    <form onSubmit={handleSubmit} className="form-app">
         <input 
-        type="text" 
-        value={ciudad}
-        onChange={handleCambioClima}
+            type="text" 
+            value={ciudad}
+            onChange={handleCambioClima}
+            placeholder="Ingresa Ciudad"
+            className="input-app"
         />
-        <button>🔍</button>
+        <img className="lupa-busqueda" src={lupaBusqueda} alt="Buscar" />
     </form>
 
-    {dataClima && (
-        <div>
+    {dataClima && dataClima.main && dataClima.weather && (
+        <div className="clima-info">
             <h3>{dataClima.name}</h3>
-             <h6>Temeratura:  {parseInt(dataClima.main.temp - difKelvin)}°C</h6>
-             <img src={`https://openweathermap.org/img/wn/${dataClima.weather[0].icon}@2x.png`} />  
+            <h6>Temperatura: {parseInt(dataClima.main.temp - difKelvin)}°C</h6>
+            <img src={`https://openweathermap.org/img/wn/${dataClima.weather[0].icon}@2x.png`} alt="Weather icon" />
         </div>
     )}
-  </div>
-  
-  )
+</div>
+
+      )
 }
