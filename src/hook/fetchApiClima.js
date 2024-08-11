@@ -24,7 +24,7 @@ export const fetchApiClima = () => {
         console.log(data);
     } catch (error) {
         console.error(error);
-        setDataClima(null); // O maneja el error de alguna manera
+        setDataClima(null);
     }
 }
 
