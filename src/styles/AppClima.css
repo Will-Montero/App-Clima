@@ -47,13 +47,13 @@
 }
 
 .clima-info {
+    place-content: center;
     margin-top: 20px;
-    background-color: rgb(0, 123, 238);
+    background-color: aliceblue;
     padding: 15px;
     border-radius: 8px;
-    text-align: center;
     width: 38%;
-    height: 33vh;
+    height: 25vh;
     margin: 20px auto;
 }
 
@@ -70,9 +70,10 @@
 }
 
 .clima-info img {
-    width: 30%;
-    height: 25vh;
+    width: 20%;
+    height: 15vh;
     font-size: 30px;
+    border-radius: 50%;
     background-color: rgb(0, 123, 238);
 }
 
@@ -98,20 +99,24 @@
     }
 
     .clima-info {
-        width: 90%;
+        width: 80%;
+        height: 23vh;
+        place-content: center;
     }
     .clima-info img {
-        width: 25%;
+        width: 20%;
         height: 12vh;
-        font-size: 30px;
+        border-radius: 50%;
         background-color: rgb(0, 123, 238);
     }
 
     .clima-info h3 {
         font-size: 20px;
+        margin: 0 auto;
     }
 
     .clima-info h6 {
+        margin: 12px auto;
         font-size: 16px;
     }
 }
@@ -141,20 +146,18 @@
     }
 
     .clima-info {
-        margin-top: 20px;
-        background-color: rgb(0, 123, 238);
-        padding: 15px;
+        place-content: center;
+        background-color:  aliceblue;
         border-radius: 8px;
         box-shadow: 0px 4px 6px rgba(196, 18, 18, 0.1);
-        text-align: center;
         width: 88%;
-        height: 25vh;
-        margin: 20px auto;
+        height: 27vh;
     }
 
     .clima-info img {
         width: 30%;
         height: 15vh;
+        border-radius: 50%;
         background-color: rgb(0, 123, 238);
     }
 
@@ -164,7 +167,6 @@
 
     .clima-info h6 {
         font-size: 17px;
-        padding-top: 15px;
 
     }
 }
