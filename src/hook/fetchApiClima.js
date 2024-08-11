@@ -28,7 +28,6 @@ export const fetchApiClima = () => {
     }
 }
 
-
     //oimos los valores de la ciudad ingresada (onChange)
     const handleCambioClima = (e) => {
       setCiudad(e.target.value)
